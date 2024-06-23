@@ -1,0 +1,291 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=1cm, right=1cm, top=1.8cm]{geometry}
+\usepackage{longtable}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\definecolor{lightblue}{RGB}{0, 150, 180}
+\definecolor{emphblue}{RGB}{0, 120, 150}
+\colorlet{emphcolor}{emphblue}
+\colorlet{body}{black!80!white}
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+%\\renewcommand{\\encodingdefault}{cg}
+%\\renewcommand{\\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-50pt}
+\begin{center}
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=\textwidth, height=0.15\textheight, keepaspectratio]{photo.JPG}
+    \end{minipage}%
+    \begin{minipage}{0.7\textwidth}
+        % \vspace*{0pt}
+        \hspace*{0pt}
+        {\Huge \scshape {Priya Raj Chanda}}\\\
+        \vspace*{2mm}
+        \hspace*{10pt}
+        \faAngleDoubleRight AIML and IoT Research Enthusiast \\
+        \vspace*{2pt}
+        \hspace*{2pt}
+        \faGoogle~\href{mailto:priyarajchanda@gmail.com}{priyarajchanda@gmail.com}\\
+        \vspace*{2pt}
+        \hspace*{2pt}
+        \faPhone~\href{tel:+91 70029 69004}{+91 70029 69004}\\
+        \vspace*{2pt}
+        \hspace*{2pt}
+        \faBirthdayCake \hspace{0.5pt} 05/06/1998\\
+        \vspace*{2pt}
+        \hspace*{2pt}
+        \faMapMarker \hspace{0.5pt} Bhaskarnagar, Guwahati, Dist: Kamrup (M), Assam - 781018, India\\
+        \vspace*{2pt}
+        \hspace*{2pt}
+        \textbf{\href{https://scholar.google.com/citations?user=nt04bqgAAAAJ&hl=en&authuser=2}{\faMortarBoard \hspace{0.5pt} Google Scholar | }}\textbf{\href{https://www.linkedin.com/in/priya-raj-chanda/}{\faLinkedin \hspace{0.5pt} Linkedin | }}\textbf{\href{https://github.com/Priyoraj}{\faGithub \hspace{0.5pt} Github | }}\textbf{\href{https://priyoraj.github.io/Portfolio/}{\faSuitcase \hspace{0.5pt} Portfolio}}\\
+    \end{minipage}
+\end{center}
+
+% \vspace*{1pt}
+% \begin{center}
+%     \faEnvelope~\href{mailto:priyarajchanda@gmail.com}{priyarajchanda@gmail.com} | \faPhone~\href{tel:+91 70029 69004}{+91 70029 69004} | \faMapMarker \hspace{0.5pt} Saheb Bagan, Bandel, Dist: Hooghly, West Bengal - 712123, India\\
+%     \vspace*{2pt}
+%     \textbf{\href{https://github.com/Priyoraj}{GitHub | }}\textbf{\href{https://www.linkedin.com/in/priya-raj-chanda/}{Linkedin | }}\textbf{\href{https://www.hackerrank.com/priyarajchanda}{HackerRank}}\\
+% \end{center}
+
+% \vspace*{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %
+    %     Education
+    %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      %\header{Education}
+      %\medskip
+  {\scshape\raggedright{\color{emphcolor}{Education}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+  \vspace{0.5mm}
+      \textbf{\faUniversity \hspace{0.5pt} Centre For Development of Advanced Computing, Mohali}\hfill \faMapMarker \hspace{0.5pt} Punjab, India\\
+M. Tech. Computer Science \& Engineering (Artificial Intelligence) \hfill August 2021 - June 2024\\
+{\sl CGPA: 7.73 out of 10}\\
+\vspace{0.5mm}
+      \textbf{\faBank \hspace{0.5pt} Central Institute of Technology, Kokrajhar}\hfill \faMapMarker \hspace{0.5pt} Assam, India\\
+B. Tech. Information Technology \hfill July 2016 - August 2021\\
+{\sl CGPA: 7.54 out of 10}\\
+\vspace{0.5mm}
+      \textbf{\faInstitution \hspace{0.5pt} Shrimanta Shankar Academy, Panbazar}\hfill \faMapMarker \hspace{0.5pt} Assam, India\\
+10+2 Science \hfill July 2014 - June 2016\\
+{\sl Percentage: 68.8}\%\\
+\vspace{0.5mm}
+      \textbf{\faInstitution \hspace{0.5pt} Don Bosco School, Sonaighuli}\hfill \faMapMarker \hspace{0.5pt} Assam, India\\
+HSLC \hfill January 2002 - June 2014\\
+{\sl Percentage: 77.3}\%\\
+\vspace{0.5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Skills
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\header{Skills}
+  {\scshape\raggedright{\color{emphcolor}{Skills}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+  \vspace{0.5mm}
+  \begin{longtable}{p{4cm}p{12cm}}
+  Programming Languages: & C, C++, Python, LaTeX \\
+  Libraries/Frameworks: & PyTorch, Fast.ai, IceVision, Tensorflow, Keras \\
+  %Databases: & SQL, MongoDB \\
+  \end{longtable}
+  \vspace{0.5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %
+    %     Projects
+    %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      {\scshape\raggedright{\color{emphcolor}{Projects}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+      \vspace{0.5mm}
+      {\textbf{Design of Spam E-Mail Filter Using Efficient Deep Learning or NLP Techniques}}\hfill{\sl Python, Convolutional Neural Networks, Natural Language Processing}\\
+          \vspace{-3mm}
+\begin{itemize} \itemsep -3pt
+\item This research is focused on solving the problem of evolving unsolicited e-mails.
+\item The goal of this research is the design \& development of an efficient and scalable e-mail spam image filter incorporating state-of-the-art technologies.
+\end{itemize}
+          \vspace*{0.5mm}
+      {\textbf{Mobile App-based Tomato Disease Identification with Fine-tuned Convolution Neural Networks}}\hfill{\sl Python, Fast.ai, PyTorch, Deep Learning (CNN), Dart, Flutter}\\
+          \vspace{-3mm}
+\begin{itemize} \itemsep -3pt
+\item This project proposes a multilingual mobile app-based tomato leaf disease identification system using pre-trained fine-tuned convolutional neural networks.
+\end{itemize}
+          \vspace*{0.5mm}
+          {\textbf{IoT-enabled strawberry leaf scorch disease detection using Deep Learning.}}\hfill{\sl Python, Fast.ai, PyTorch, Deep Learning (CNN), C\#, .NET Core, SkiaSharp, ONNX}\\
+          \vspace{-3mm}
+\begin{itemize} \itemsep -3pt
+\item The primary goal of this research is the development of an IoT-based strawberry leaf scorch disease detection scheme using lightweight CNN architectures and the .NET framework.
+\end{itemize}
+          \vspace*{0.5mm}
+{\scshape\raggedright{\color{emphcolor}{Publications}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+      \vspace{0.5mm}
+      Amitava Nag, \textbf{Priya Raj Chanda}, and Sukumar Nandi. "Mobile app-based tomato disease identification with fine-tuned convolutional neural networks." Computers and Electrical Engineering 112 (2023): 108995.
+      \newline\textbf{DOI: }{\em \href{https://doi.org/10.1016/j.compeleceng.2023.108995}{https://doi.org/10.1016/j.compeleceng.2023.108995}}
+      \vspace*{4mm}
+      % \vspace*{2pt}
+
+          
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      %
+      %     Certifications
+      %
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      {\scshape\raggedright{\color{emphcolor}{Certifications}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+      \vspace{0.5mm}
+      • FDP on Recent Advancement \& Future Trends in AI and ML (RAFTML) - \textbf{\href{https://drive.google.com/file/d/1hxyq4EwJViLteH_s38yKJDIG6zEyN-yw/view?usp=sharing}{Abacus Institute of Engineering And Management, Hooghly, West Bengal }}\\
+\vspace*{1mm}
+      • FDP on Internet of Things (IoT) with Artificial Intelligence (AI) and Machine Learning (ML) - \textbf{\href{https://drive.google.com/file/d/1nkywl5fc3onvEmR8JhIFHx_8UYcwEUbY/view?usp=sharing}{Academy of Technology, Hooghly, West Bengal }}\\
+\vspace*{1mm}
+      • Fellow at 6th Summer School on Artificial Intelligence with focus on Computer Vision \& Machine Learning - \textbf{\href{https://drive.google.com/file/d/14PB8_c5nCV9akWrfmdYdHLCoCkthIhet/view?usp=sharing}{IIIT Hyderabad}}\\
+\vspace*{1mm}
+      • Project-based online course on Machine Learning Using Python - \textbf{\href{https://drive.google.com/file/d/1qrwGlTguMqHuLFoG9R3_M4pFOLr7850p/view?usp=sharing}{Skyfilabs}}\\
+\vspace*{1mm}
+      • Project-based Industrial Training Program on Web Development using Python - \textbf{\href{https://drive.google.com/file/d/1PJgvEGv3F3bIdsVFiNCZsQhPgqEcOGZf/view?usp=sharing}{OgmaTechLab}}\\
+\vspace*{1mm}
+      • Internet of Things (IoT) \& Its Applications - \textbf{\href{https://drive.google.com/file/d/1H-Ha-RE7amy0kRLSrc0BiSP4dSCIaA6K/view?usp=sharing}{CIT Kokrajhar ACM Student Chapter}}\\
+\vspace*{1mm}
+      • Python Scripting and Security - \textbf{\href{https://drive.google.com/file/d/1ZxBTVE3T-Dbd9iVSJZ-SoHss1sIOy5Yj/view?usp=sharing}{Techcracy 2016}}\\
+\vspace*{2mm}
+      \vspace{0.5mm}
+      {\scshape\raggedright{\color{emphcolor}{Experience}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+      \vspace{0.5mm}
+      Assistant Professor in the Department of Computer Science \& Engineering at \textbf{\href{https://drive.google.com/file/d/1epEgTLdh-mOB0pqq_2WUmILy305SlNiP/view?usp=sharing}{Academy of Technology, Hooghly, West Bengal - 712121, India}} \hfill \faCalendar \hspace{0.5pt} 28 February 2023 - 14 June 2024\\
+      \begin{itemize}
+          \item In my capacity at this institution, I served as the Faculty Course Coordinator for the following undergraduate courses:
+          \vspace*{1mm} \\
+            \begin{tabular}[t]{@{}p{0.45\linewidth}@{}p{0.45\linewidth}@{}}
+            1. Introduction to Internet of Things & 2. Programming for Problem Solving \\
+            3. E-Commerce \& ERP & 4. Computer Networks Lab \\
+            5. Fundamentals of Computer Science Lab &
+        \end{tabular}
+      \end{itemize}
+      
+      \vspace{2mm}
+      
+%\header{Honors & Awards}
+{\scshape\raggedright{\color{emphcolor}{Honors \& Awards}}\par}\medskip
+  \vspace{-\baselineskip}
+  {\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  \smallskip
+      \vspace{0.5mm} 
+      Served as Student Member and College Treasurer for the Association for Computing Machinery (ACM) Student Chapter at Central Institute of Technology, Kokrajhar.
+    \vspace{5mm} 
+      \\ \textbf{\em{I declare that the information furnished above is true to the best of my knowledge.
+       \\ \hfill-Priya Raj Chanda}}
+      
+
+%\header{Languages}
+%{\scshape\raggedright{\color{emphcolor}{Languages}}\par}\medskip
+ % \vspace{-\baselineskip}
+  %{\color{lightblue}\noindent\rule\linewidth{1.5pt} \par}
+  %\smallskip
+
+   %   \vspace{2mm}
+    % \noindent\hspace{0.2\linewidth}
+  %\makebox[0.4\linewidth][l]{Assamese, Bengali \& Hindi (native)}
+  %\makebox[0.3\linewidth][l]{English (fluent)}
+  %\par\smallskip
+%\vspace*{1mm}
+ %    \vspace{2mm}
+
+%\header{Referrer}
+%\noindent\hspace{0.2\linewidth}
+ % \makebox[0.4\linewidth][l]{
+  %  \href{#6}{\large{1}}
+   % \normalsize\hspace{2ex}\faMortarBoard~2
+  %}\par\smallskip
+  %\noindent\hspace{0.2\linewidth}
+  %\makebox[3ex][l]{\faInstitution}\makebox[0.6\linewidth][l]{3}\par
+  %\noindent\hspace{0.2\linewidth}
+  %\makebox[3ex][l]{\faEnvelope}\makebox[0.6\linewidth][l]{\href{mailto:#4}{4}}\par
+  %\noindent\hspace{0.2\linewidth}
+  %\makebox[3ex][l]{\faPhone}\makebox[0.6\linewidth][l]{5}\par
+  %\medskip
+    \end{document}
